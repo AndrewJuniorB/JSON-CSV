@@ -1,0 +1,37 @@
+<!--
+When the user clicks submit, POST the form data to the server.
+The form submission process should use the default browser action/behavior. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta lang="en">
+  <meta charset="utf-8">
+  <title>
+    CSV report Generator
+  </title>
+</head>
+
+<body>
+  <div><h1>Welcome to JSON => CSV Generator</h1></div>
+  <!-- TEXTAREA FORM-->
+  <!-- <form id="submitForm" action="http://localhost:3000"  method="POST"> -->
+    <!-- <input type="textbox" placeholder="JSON submission"><br> -->
+    <!-- <textarea id="csvGenerator" name="loadFile" rows="15" cols="50" placeholder="Put JSON to GENEREATE CSV"></textarea>
+      <tr><br></tr> -->
+      <!-- <input type="file" name="load" accept=".json" onchange='openFile(event)'><br>
+        <tr><br></tr> -->
+        <!-- <input type="submit" value="Submit">
+        </form> -->
+
+  <form method='post' action='/' encType='multipart/form-data'>
+    <input type="file" id='csvGenerator' name='loadFile'><br><br>
+    <input type='submit' value='Generate CSV'><br><br>
+  </form>
+  <button type="submit" onclick="window.open('/download_json')">Downloadgit  CSV</button><br><br>
+  <div class='csvRender'></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</html>
